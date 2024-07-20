@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/sidebar.css" rel="stylesheet">
+    <link href="/webjars/bootstrap/5.2.3/css/bootstrap.css" rel="stylesheet"/>
+    <!-- Scripts to preload -->
+    <script src="/webjars/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+<aside th:fragment="sidebar">
+    <div class="d-flex flex-column p-3 text-white bg-dark">
+        <hr style="margin-top: -16px">
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="#" th:href="@{https://github.com/Glabay}" target="_blank" class="nav-link text-white">
+                    <svg class="icon icon-github">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                    <span class="fs-5">GitHub</span>
+                </a>
+                <hr>
+            </li>
+            <li class="nav-item">
+                <a href="#" th:href="@{https://youtube.com/@Glabay}" target="_blank" class="nav-link text-white">
+                    <svg class="icon icon-youtube">
+                        <use xlink:href="#icon-youtube"></use>
+                    </svg>
+                    <span class="fs-5">YouTube</span>
+                </a>
+                <hr>
+            </li>
+            <li class="nav-item">
+                <a href="#" th:href="@{https://linkedin.com/in/mike-glabay/}" target="_blank" class="nav-link text-white">
+                    <svg class="icon icon-linkedin">
+                        <use xlink:href="#icon-linkedin"></use>
+                    </svg>
+                    <span class="fs-5">LinkedIn</span>
+                </a>
+                <hr>
+            </li>
+        </ul>
+    </div>
+</aside>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝘎𝘭𝘢𝘣𝘢𝘺-𝘚𝘵𝘶𝘥𝘪𝘰𝘴 | Home</title>
+
+    <link href="/webjars/bootstrap/5.2.3/css/bootstrap.css" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet"/>
+    <link href="/css/sidebar.css" rel="stylesheet"/>
+</head>
+<body class="bg-gs">
+    <svg th:replace="~{fragments/svg::svg}"></svg>
+    <div th:replace="~{fragments/header::header}"></div>
+    <div class="wrapper">
+        <aside th:replace="~{fragments/sidebars/_sidebar_main::sidebar}"></aside>
+        <!-- Content section -->
+        <div class="content px-4 text-center">
+            <img src="../static/images/glabay_studios.png" width="50%" height="30%" th:src="@{images/glabay_studios.png}" alt="Logo">
+            <div style="display: flex">
+                <div class="content-split">
+                    <iframe width="420" height="720" src="https://www.youtube.com/embed/qOsVmVlBHSs" title="About Me ︱ Mike Glabay" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="col-lg-6 mx-auto">
+                    <h1>Welcome to 𝘎𝘭𝘢𝘣𝘢𝘺-𝘚𝘵𝘶𝘥𝘪𝘰𝘴</h1>
+                    <p>
+                        With over two decades of dedicated experience in software development, I am a seasoned Fullstack Java Developer with a passion for crafting robust and scalable solutions. From my early days as a curious child exploring the world of code, I have immersed myself in the Java programming language and mastered a spectrum of others along the way. This journey has equipped me with a deep understanding of software development principles, enabling me to create innovative and scalable solutions that meet the evolving needs of modern businesses.
+                        My primary stack revolves around Java and Spring Boot, ensuring the creation of efficient and maintainable backend systems. I possess a deep understanding of database management, having worked extensively with H2, SQL, and MongoDB. On the frontend, I excel in JavaScript and HTML, weaving together seamless user interfaces that enhance the overall user experience.
+                        Key strengths that I bring to the role include:
+                    </p>
+                    <h3>1. Java Proficiency:</h3>
+                    <p>A mastery of Java, demonstrated through the development of robust and scalable applications. My ability to leverage the language's features ensures the creation of efficient and maintainable code.</p>
+                    <h3>2. Full-stack Development:</h3>
+                    <p>A well-rounded skill set that encompasses both front-end and back-end development. I am adept at creating seamless user experiences while ensuring the underlying systems are robust and performant.</p>
+                    <h3>3. Problem-solving Skills:</h3>
+                    <p>A proven ability to analyze complex problems and devise innovative solutions. My experience has equipped me with the skills to troubleshoot issues effectively and implement solutions that enhance overall system functionality.</p>
+                    <h3>4. Project Lifecycle Management:</h3>
+                    <p>From conceptualization to deployment, I have been involved in every phase of the software development lifecycle. This end-to-end experience ensures a thorough understanding of project requirements and the ability to deliver high-quality software on time.</p>
+                    <h3>5. Collaborative Approach:</h3>
+                    <p>A team player who values effective communication and collaboration. I thrive in environments that foster creativity and knowledge sharing, and I am excited about the prospect of contributing my skills to the dynamic team at BrightOrder.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/webjars/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

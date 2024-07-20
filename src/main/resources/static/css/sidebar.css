@@ -1,0 +1,37 @@
+.wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+aside {
+    height: 100%;
+    width: 256px;
+    float: left;
+    position: sticky;
+    top: 0;
+}
+
+.nav-item {
+    margin: 0.5rem 0;
+}
+
+.bi {
+    vertical-align: -.125em;
+    pointer-events: none;
+    fill: currentColor;
+}
+
+.dropdown-toggle {
+    outline: 0;
+}
+
+.nav-flush .nav-link {
+    border-radius: 0;
+}
+
+.side-flex {
+    display: flex !important;
+    height: 100vh;
+}

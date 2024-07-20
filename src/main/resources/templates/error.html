@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝘎𝘭𝘢𝘣𝘢𝘺-𝘚𝘵𝘶𝘥𝘪𝘰𝘴 | Error</title>
+
+    <link href="/webjars/bootstrap/5.2.3/css/bootstrap.css" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet"/>
+</head>
+<body class="bg">
+<div th:replace="~{fragments/header::header}"></div>
+<div class="px-4 py-5 text-center">
+    <h1 class="display-5 fw-bold">Oops... ⚒ (⊙_◎) </h1>
+    <div class="col-lg-6 mx-auto">
+
+        <h3 th:if="${#strings.isEmpty(errorCode)}" class="display-5 text-center">404</h3>
+        <h3 th:unless="${#strings.isEmpty(errorCode)}" class="display-5 text-center" th:text="${errorCode}"/>
+
+        <p th:if="${#strings.isEmpty(errorText)}" class="display-5 text-center">
+            It seems like the page you're looking for either went for a wonder...<br>
+            or never really existed to begin with.
+        </p>
+        <h3 th:unless="${#strings.isEmpty(errorText)}" class="display-5 text-center" th:text="${errorText}"/>
+
+    </div>
+    <div class="px-4 py-3 text-center">
+        <h1 style="color:#02999f">🧙‍<br>The little Snippet who tried</h1>
+        <p style="color:#029f0b">
+            He did a crawl, he did a scan<br>
+            Searching the web as fast as he can<br>
+            Scanned and Crawled high and low<br>
+            Going places not many can go<br>
+            The little Snippet tried and tried<br>
+            With no results the Thread has died<br>
+        </p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>𝘎𝘭𝘢𝘣𝘢𝘺-𝘚𝘵𝘶𝘥𝘪𝘰𝘴 | The Runiverse</title>
+
+    <link href="/webjars/bootstrap/5.2.3/css/bootstrap.css" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet"/>
+
+    <script src="/webjars/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="bg-gs">
+    <div th:replace="~{fragments/header::header}"></div>
+    <div class="px-4 text-center">
+        <img src="../static/images/runiverse_logo.png" width="50%" height="50%" th:src="@{images/runiverse_logo.png}" alt="Logo">
+        <div style="display: flex">
+            <div class="col-lg-6 mx-auto">
+                <iframe width="720" height="420" src="https://www.youtube.com/embed/lcElb9UM7Sg" title="The Runiverse - What is it?" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="720" height="420" src="https://www.youtube.com/embed/RAmIfpEsDbM" title="RuneVote - What is it?" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="col-lg-6 mx-auto">
+                <h1>Welcome to The Runiverse</h1>
+                <p>
+                    The Runiverse is a set of Discord Bots designed to complete the integration between RSPS and Discord.
+                    We help you eliminate the need for a website by leveraging Discord's community and forum features.
+                    Let us connect your Discord with your RSPS, allowing your players to do everything they can on a website within Discord itself.
+                </p>
+                <p>
+                    Simply invite the core Runiverse bot to your server, use <code>/register</code> with it, tell us who you are, and provide a link to your site and launcher/client.
+                    We will generate a RuneVote listing, and from there, you can invite the bots you want.
+                </p>
+                <h3>The Bot Family</h3>
+                <ul>
+                    <li>✦ Runiverse ✦</li>
+                    <li>✦ RuneVote ✦</li>
+                    <li>✦ RuneScore ✦</li>
+                    <li>✦ RuneStore ✦</li>
+                </ul>
+                <h3>Runiverse:</h3>
+                <p>
+                    One single place for all your RSPS needs, from Server-Owners to Server-Players, or just a curious adventurer looking for that next place to call home.
+                    With a collection of services from voting to shopping, and with ways to view the leaderboards, there is no place like ::1.
+                </p>
+                <p>
+                    With this bot, Owners can register their Discord Guild with their RSPS. From here you can implement our free services and much more to come.
+                </p>
+                <h3>RuneVote:</h3>
+                <p>
+                    RuneVote is your all-in-one solution for seamlessly integrating top-list advertisements and a user-friendly rewards store directly into your Discord server.
+                    Designed with gamers and server owners in mind, RuneVote leverages microservices and a powerful Discord bot interface to streamline the process of incentivizing votes and offering enticing rewards, all without the hassle of leaving the comfort of your Discord community.
+                </p>
+                <h3>RuneScore:</h3>
+                <p>
+                    Bringing e-commerce to Discord. Simply create your store, add your stock, and wait for players to view your store and buy your products!
+                    The RuneStore checkout is compatible with PayPal only, so you will need a PayPal account.
+                    <br>
+                    <a href="https://www.paypal.com/">Sign up for PayPal today</a>
+                </p>
+                <h3>RuneStore:</h3>
+                <p>
+                    A HiScore/Leaderboard completes inside of Discord, search for top players, specific players, or for the top in a given skill
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

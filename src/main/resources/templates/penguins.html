@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>𝘎𝘭𝘢𝘣𝘢𝘺-𝘚𝘵𝘶𝘥𝘪𝘰𝘴 | Project Penguins</title>
+
+    <link href="/webjars/bootstrap/5.2.3/css/bootstrap.css" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet"/>
+
+    <script src="/webjars/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="bg-gs">
+<div th:replace="~{fragments/header::header}"></div>
+<div class="px-4 text-center">
+    <img src="../static/images/glabay_studios.png" width="50%" height="50%" th:src="@{images/glabay_studios.png}" alt="Logo">
+    <h1>🐧 Project Penguins 🐧</h1>
+    <div class="d-flex justify-content-center">
+        <div class="content-split">
+            <img src="../static/images/penguins_ss_1.jpg" th:src="@{images/penguins_ss_1.jpg}" width="600" height="500" alt="Penguins Screenshot">
+            <img src="../static/images/penguins_level.jpg" th:src="@{images/penguins_level.jpg}" width="600" height="500" alt="Penguins Level">
+        </div>
+        <div class="content-split col-lg-6 mx-auto">
+            <p>
+                I am aiming for a retro Mario style, 2D, side-scrolling platformer. There will be enemies and challenges awaiting you while you learn about different types of Penguins and how they live and struggle each and every day.
+            </p>
+            <p>
+                The idea so far is the player will be at a main page when first launching the game, and you are offered a few options: “Play”, “Settings”, “Credits”, and “Quit”.
+            </p>
+            <h3>Options:</h3>
+            <ul>
+                <li><strong>Play:</strong> You are then taken to a screen where up to 3-4 save slots will be there for you to choose a game file from that you want to play, with options to remove a saved file.</li>
+                <li><strong>Settings:</strong> Here you can change things like the volume, sound effects, test server connection, and other things I haven’t thought of yet, like key binds?</li>
+                <li><strong>Credits:</strong> This will give credit where it is due, not much else can be said.</li>
+                <li><strong>Quit:</strong> This will exit the game, but come on… why would you ever click that option.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

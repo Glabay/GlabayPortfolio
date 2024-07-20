@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>𝘎𝘭𝘢𝘣𝘢𝘺-𝘚𝘵𝘶𝘥𝘪𝘰𝘴 | OSBY</title>
+
+    <link href="/webjars/bootstrap/5.2.3/css/bootstrap.css" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet"/>
+
+    <script src="/webjars/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="bg-gs">
+<div th:replace="~{fragments/header::header}"></div>
+<div class="px-4 text-center">
+    <img src="../static/images/boneyard.webp" width="50%" height="50%" th:src="@{images/boneyard.webp}" alt="Logo">
+    <h1>💻 Welcome to OldSchool BoneYard 🦴</h1>
+    <div class="d-flex justify-content-center">
+        <div class="content-split">
+            <a class="navbar-brand discord-link d-flex justify-content-end" href="#" th:href="@{https://discord.gg/pQpCNMrKDq}">
+                <img src="../static/images/img.png" th:src="@{images/img.png}" width="90%" height="90%" alt="Boneyard Logo">
+            </a>
+        </div>
+        <div class="content-split col-lg-6 mx-auto">
+            <h3>Inception:</h3>
+            <p>OSBY breathes new life into the classic game, offering a refreshing twist with custom content that will captivate and challenge you. Our focus centers around the iconic lands of Zeah and Fossil Island, providing a fresh perspective and thrilling gameplay. Engage in battles alongside fellow adventurers against formidable monsters, but remember, only the one who inflicts the most damage will claim the coveted drops as the Killer. Will you rise to the top and emerge victorious?</p>
+            <h3>Alpha Testers:</h3>
+            <p>Become part of OSBY's evolution as Alpha testers. Your invaluable feedback refines the project!</p>
+            <h3>World of OSBY:</h3>
+            <p>Explore Fossil Island's enchanting home for OSBY. We have chosen not to use the RS2 maps for our content. Instead, we leverage the land of Zeah as the mainland for skilling and activities, and we repurpose the dungeons of RuneScape to bring a fresh face to the land you may think you know.</p>
+            <h3>Join the Adventure:</h3>
+            <p>OSBY is a labor of love. Join this evolving journey for a captivating and unique RuneScape experience! 🚀</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

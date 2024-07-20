@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <link href="/webjars/bootstrap/5.2.3/css/bootstrap.css" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet"/>
+    <script type="text/javascript" src="/webjars/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1">
+    <title>Glabay-Studios | Home</title>
+</head>
+<body class="bg-gs">
+    <div th:replace="~{fragments/header::header}"></div>
+    <div class="px-4 text-center">
+        <img src="../static/images/boneyard.webp" width="50%" height="50%" th:src="@{images/boneyard.webp}" alt="Logo">
+        <h1>Welcome to 𝘎𝘭𝘢𝘣𝘢𝘺-𝘚𝘵𝘶𝘥𝘪𝘰𝘴 Registration</h1>
+        <div th:if="${param.noCreds}">
+            No credentials we provided.
+        </div>
+        <div th:if="${param.userExists}">
+            This username exists, please use a new name.
+        </div>
+        <div th:if="${param.passMissMatch}">
+            Your passwords do not match.
+        </div>
+        <br>
+        <div class="container align-content-center">
+            <form action="#" th:action="@{/api/v1/registration/newuser}" th:object="${newUser}" method="post">
+                <label>
+                    <input type="text" placeholder="Username" style="width: 160px; text-align: center" th:field="*{username}" required>
+                </label><br>
+                <label>
+                    <input type="text" placeholder="Email" style="width: 160px; text-align: center" th:field="*{email}" required>
+                </label><br>
+                <label>
+                    <input type="password" placeholder="Password" style="width: 160px; text-align: center" th:field="*{password}" required>
+                </label><br>
+                <label>
+                    <input type="password" placeholder="Re-type pass" style="width: 160px; text-align: center" th:field="*{rePassword}" required>
+                </label><br>
+                <button type="submit" class="btn btn-primary">Register</button>
+                <br>
+                <a class="navbar-brand" href="#" th:href="@{/login}">Already registered? Log in.</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

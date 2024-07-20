@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6" lang="en">
+<head>
+    <link href="/css/style.css" rel="stylesheet"/>
+    <script type="text/javascript" src="/webjars/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1">
+    <title>Header</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-fixed-top" th:fragment="header">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" th:href="@{/home}">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item" sec:authorize="hasAnyRole('ROLE_OWNER', 'ROLE_DEVELOPER')">
+                        <a class="nav-link" href="#" th:href="@{/acp}">Database</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" th:href="@{/osby}">OSBY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" th:href="@{/runiverse}">The Runiverse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" th:href="@{/irpg}">I-RPG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" th:href="@{/penguins}">Project Penguin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" th:href="@{/misc}">Misc.</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex flex-row-reverse">
+                <div th:if="${#authorization.expression('isAuthenticated()')}">
+                    <a class="btn btn-primary" href="#" th:href="@{/logout}">Logout</a>
+                </div>
+                <div th:unless="${#authorization.expression('isAuthenticated()')}">
+                    <a class="btn btn-primary" href="#" th:href="@{/register}">Register</a>
+                    <a class="btn btn-primary" href="#" th:href="@{/login}">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>

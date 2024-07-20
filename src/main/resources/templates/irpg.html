@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>𝘎𝘭𝘢𝘣𝘢𝘺-𝘚𝘵𝘶𝘥𝘪𝘰𝘴 | I-RPG</title>
+
+    <link href="/webjars/bootstrap/5.2.3/css/bootstrap.css" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet"/>
+
+    <script src="/webjars/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="bg-gs">
+<div th:replace="~{fragments/header::header}"></div>
+<div class="px-4 text-center">
+    <img src="../static/images/glabay_studios.png" width="50%" height="50%" th:src="@{images/glabay_studios.png}" alt="Logo">
+    <h1>Indie-Role Playing Game</h1>
+    <div class="d-flex justify-content-center">
+        <div class="content-split">
+            <img src="../static/images/irpg-img.png" th:src="@{images/irpg-img.png}" width="90%" height="90%" alt="Logo">
+        </div>
+        <div class="content-split col-lg-6 mx-auto">
+            <p>
+                This is a Top-Down, 2D, Fantasy, RPG, with some online capabilities. In a world full of MMO games, I bring you IO-RPG.
+            </p>
+            <p>
+                This is a game about magic, based in a time when legends were born, magic is real… and everywhere around you. As you explore this magical land and begin your adventure you will soon realize there is more to the world then meets the eye.
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
